@@ -1,8 +1,4 @@
-import {ADD_POST} from "./types";
+import {ADD_POST, REMOVE_POST} from "./types";
 
-export const addPost = (post) => {
-    return {
-        type: ADD_POST,
-        payload: post
-    }
-}
+export const addPost = (post) => ({type: ADD_POST, payload: post});
+export const removePost = (id) => ({type: REMOVE_POST, payload: id});
