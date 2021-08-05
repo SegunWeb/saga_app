@@ -14,13 +14,14 @@ const App = () => {
             <div className="row">
 
                 <div className={'col'}>
-                    <h2>посты</h2>
+                    <h2>Посты</h2>
                     <Posts/>
                 </div>
                 <div className={'col'}>
                     <h2>Серверные посты</h2>
                     <FetchPosts/>
                 </div>
+
             </div>
 
         </div>
