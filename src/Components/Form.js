@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useDispatch } from "react-redux";
+import {useDispatch} from "react-redux";
 import {addPost} from "../redux/action";
 
 const Form = () => {
@@ -7,8 +7,6 @@ const Form = () => {
     const dispatch = useDispatch();
     const [text, setText] = useState({title: ''});
     const [btnState, setBtnState] = useState(true);
-
-
 
     const handleText = (e) => {
         if(text[e.target.name].length !== 0) {
@@ -20,10 +18,11 @@ const Form = () => {
         const item = {id: Date.now().toString(), title: text.title}
         dispatch(addPost(item))
 
-
         setText({title: ''});
         setBtnState(true)
     };
+
+
 
 
     return (

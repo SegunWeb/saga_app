@@ -1,4 +1,4 @@
-import {ADD_POST, REMOVE_POST} from "../types";
+import {ADD_POST, FETCH_POST, REMOVE_FETCH_POST, REMOVE_POST} from "../types";
 
 const initialState = {
     posts: [
@@ -6,7 +6,8 @@ const initialState = {
         {id: 3, title: 'text 23'},
         {id: 2, title: 'text 33'},
     ],
-    fetchPosts: []
+    fetchPosts: [],
+
 };
 
 export const postsReducer = (state = initialState, action) => {
@@ -21,6 +22,18 @@ export const postsReducer = (state = initialState, action) => {
             return {
                 ...state,
                 posts: state.posts.filter(item => item.id !== action.payload)
+            }
+        }
+        case FETCH_POST: {
+            return {
+                ...state,
+                fetchPosts: [...action.payload]
+            }
+        }
+        case REMOVE_FETCH_POST: {
+            return {
+                ...state,
+                fetchPosts: state.fetchPosts.filter(item => item.id !== action.payload)
             }
         }
 
