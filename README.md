@@ -1,8 +1,6 @@
-# Getting Started with Create React App
+Small application, receiving data from the test server https://jsonplaceholder.typicode.com/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+Using basic redux saga functions for more control over action creators
 
 In the project directory, you can run:
 
