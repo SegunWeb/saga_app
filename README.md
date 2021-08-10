@@ -3,6 +3,7 @@ Small application, receiving data from the test server https://jsonplaceholder.t
 Using basic redux saga functions for more control over action creators
 
 In the project directory, you can run:
+https://segunweb.github.io/saga_app/
 
 ### `npm start`
 
